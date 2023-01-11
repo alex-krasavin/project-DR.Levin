@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Inter&family=Rubik:wght@300;400;500&display=swap');
+@import"./base/fonts";
+
+// Base
+@import "./base/vars";
+@import "./base/reset";
+@import "./base/base";
+
+//Blocks
+@import "./blocks/logo";
+@import "./blocks/btn-cta";
+@import "./blocks/title-main";
+@import "./blocks/nav";
+
+// section
+@import "./section/header";
+@import "./section/benefits";
