@@ -1,0 +1,103 @@
+.health {
+    border-radius: 70px;
+    position: relative;
+    padding: 124px 220px 130px 114px;
+    background:url(../../img/health/health-bg.jpg) 0 0/cover no-repeat;
+}
+
+
+.health__bg {
+    position: absolute;
+    top: 12%;
+    right: 2%;
+    z-index: 1;
+
+    &-descr {
+        position: absolute;
+        left: 50%;
+        bottom: 6%;
+        transform: translateX(-30%);
+    }
+
+    &-name {
+        font-family: "Cat";
+        font-size: 25.5px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    &-text {
+        font-weight: 600;
+        font-size: 16.2178px;
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+.health__title {
+    position: relative;
+    display: flex;
+    padding-left: 70px;
+    max-width: 870px;
+    z-index: 2;
+
+}
+
+.health__description {
+    padding-top: 85px;
+    padding-bottom: 51px;
+    padding-left: 37px;
+    max-width: 1320px;
+    background: #FFFFFF;
+    border-radius: 59px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 16%);
+}
+
+// .health__list {
+
+// }
+
+.health__item {
+    position: relative;
+    max-width: 1080px;
+    padding-left: 43px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    color: #20305B;
+
+    + .health__item {
+        margin-top: 35px;
+    }
+
+    &:first-child {
+        max-width: 525px;
+    }
+
+    &:nth-child(2) {
+        max-width: 740px;
+    }
+
+    &::before {
+        content: "+";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "Cat";
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: #7BC35A;
+        border-radius: 50%;
+        clip-path: polygon(50% 0%, 83% 6%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 18% 6%);
+    }
+}
+
+.health__item-text {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 150%;
+}
