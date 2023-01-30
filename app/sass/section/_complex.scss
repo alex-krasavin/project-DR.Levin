@@ -11,6 +11,10 @@
         position: absolute;
         right: 80px;
     }
+
+    @media (max-width:1080px) {
+        display: none;
+    }
 }
 
 .complex__title {
@@ -71,7 +75,8 @@
 .complex__services-bg {
     position: absolute;
     bottom: -22%;
-    width: 620px;
+    width: 555px;
+    left: -80%;
     height: 375px;
     background: url(../img/complex/services-bg.svg) no-repeat,url(../img/complex/services-blur.png) center/cover no-repeat;
 }
@@ -93,9 +98,9 @@
     color: #FFCB06;
 }
 
-.complex__suggestion {
+// .complex__suggestion {
 
-}
+// }
 
 .complex__suggestion-text {
     font-family: 'Cat';

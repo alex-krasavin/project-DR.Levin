@@ -1,6 +1,6 @@
 .making-an-appointment {
     padding: 18px 30px 19px 30px;
-    background: #FF276C;
+    background-color: #FF276C;
     border-radius: 15px;
 
     font-weight: 500;
@@ -8,4 +8,15 @@
     line-height: 1.27;
     color: #FFFFFF;
     clip-path: polygon(0 0%, 98% 5%, 100% 100%, 0 100%);
+
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        background-color: #ac234e;
+    }
+
+    @media (max-width:1389px) {
+        padding: 15px 20px 16px;
+        font-size: 14px;
+    }
 }
