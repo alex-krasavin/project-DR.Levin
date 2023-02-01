@@ -179,10 +179,8 @@
 }
 
 .moments__slider-container {
-    max-width: 1145px;
     display: flex;
-    overflow: hidden;
-    border-radius: 25px;
+    transition: all 0.5s ease-in;
 
     @media (max-width:1180px) {
         display: grid;
@@ -204,6 +202,11 @@
         // grid-template-columns:repeat(3,90px);
         grid-template-rows: repeat(3,90px);
     }
+}
+
+.moments__slider-wrapper {
+    max-width: 1145px;
+    overflow: hidden;
 }
 
 .moments__slider-teeth {
@@ -254,11 +257,11 @@
 
 
 .moments__slider-item {
-
+    border-radius: 25px;
+    object-fit: cover;
     @media (max-width:1180px) {
         height: 100%;
         border-radius: 15px;
-        object-fit: cover;
     }
 }
 

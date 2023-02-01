@@ -98,33 +98,6 @@
     color: #20305B;
     transition: all 0.3s ease-in;
 
-    &--active {
-        position: relative;
-        color: #FFF;
-        background-color: #20305B;
-        border-radius: 25px 0px 0px 25px;
-
-        &:hover {
-            background-color: #474A6A;
-        }
-
-        &::before {
-            content: "";
-            display: block;
-            width: 26px;
-            height: 26px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%,75%) rotate(45deg);
-            background-color: #FFF;
-
-            @media (max-width:1140px) {
-                display: none;
-            }
-        }
-    }
-
     @media (max-width:1140px) {
         position: relative;
         font-size: 24px;
@@ -153,38 +126,44 @@
         background-color: #FEEDE0;
     }
 
-    // &.first {
-    //     position: relative;
-    //     color: #FFF;
-    //     background-color: #20305B;
-    //     border-radius: 25px 0px 0px 25px;
-
-    //     &:hover {
-    //         background-color: #474A6A;
-    //     }
-
-    //     &::before {
-    //         content: "";
-    //         display: block;
-    //         width: 26px;
-    //         height: 26px;
-    //         position: absolute;
-    //         bottom: 0;
-    //         left: 50%;
-    //         transform: translate(-50%,75%) rotate(45deg);
-    //         background-color: #FFF;
-
-    //         @media (max-width:1140px) {
-    //             display: none;
-    //         }
-    //     }
-    // }
-
     &:last-child {
         border-radius: 0px 25px 25px 0px;
 
         @media (max-width:1140px) {
             border-radius: unset;
+        }
+    }
+    &:first-child {
+        border-radius: 25px 0px 0px 25px;
+
+        @media (max-width:1140px) {
+            border-radius: unset;
+        }
+    }
+
+    &--active {
+        position: relative;
+        color: #FFF;
+        background-color: #20305B;
+
+        &:hover {
+            background-color: #474A6A;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,75%) rotate(45deg);
+            background-color: #FFF;
+
+            @media (max-width:1140px) {
+                display: none;
+            }
         }
     }
 }
@@ -195,7 +174,7 @@
 
     @media (max-width:1140px) {
         position: absolute;
-        top: 35px;
+        top: 45px;
         right: 50px;
         display: inline-block;
         cursor: pointer;
@@ -203,7 +182,7 @@
 
     @media (max-width:600px) {
         right: 18px;
-        top: 50%;
+        top: 30px;
         transform: translateY(-50%);
     }
 }
@@ -244,18 +223,20 @@
     font-size: 24px;
     line-height: 31px;
     color: #000000;
-
-    @media (max-width:1140px) {
-        max-width: unset;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-        background-color: #fff;
-    }
-
+    
     @media (max-width:1140px) {
         display: none;
     }     
+
+    &--active{
+        display: none;
+        @media (max-width:1140px) {
+            display: block;
+            max-width: unset;
+            width: 100%;
+            margin-right: 0;
+            background-color: #fff;
+    }   }
 }
 
 .price__item {
@@ -284,11 +265,8 @@
 
       @media (max-width:1140px) {
         margin-bottom: 8px;
+        text-align: left;
         max-width: unset;
-      }
-
-      @media (max-width:650px) {
-      
       }
     }
 
@@ -397,6 +375,7 @@
 
     @media (max-width:1140px) {
         padding-left: 18px;
+        text-align: left;
     }
 }
 
