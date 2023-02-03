@@ -5,6 +5,7 @@ function init () {
     initTabs();
     initForm();
     initSlider();
+    initMobMenu();
 }
 
 function initTabs () {
@@ -219,4 +220,39 @@ function initSlider () {
     prevSlideBtn.addEventListener("click",prevSlide)
     createPagination(paginationWrapper);
     slideChangeOnPagination();
+}
+
+function initMobMenu () {
+    const btnMobMenu = document.querySelector(".mob-menu__btn");
+    const mobMenu = document.querySelector(".mob-menu")
+
+    const deleteActiveClass = () => {
+        document.body.classList.remove("hidden");
+        btnMobMenu.classList.remove("active")
+        mobMenu.classList.remove("mob-menu--active")
+    }
+
+    btnMobMenu.addEventListener("click", () => {
+        btnMobMenu.classList.toggle("active")
+        mobMenu.classList.toggle("mob-menu--active")
+        // if(!mobMenu.classList.contains("mob-menu--active")) {
+        //     mobMenu.classList.add("mob-menu--hide")
+        // }else {
+        //     mobMenu.classList.remove("mob-menu--hide")
+        // }
+        document.body.classList.toggle("hidden");
+    })
+
+    mobMenu.addEventListener("click", (e) => {
+       const target = e.target;
+       if(target.classList.contains("nav-order__link")) {
+            deleteActiveClass();
+       }
+    })
+
+    window.addEventListener("resize", () => {
+        if(window.innerWidth > 768) {
+            deleteActiveClass();
+        }
+    })
 }

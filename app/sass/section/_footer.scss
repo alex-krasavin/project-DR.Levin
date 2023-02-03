@@ -62,10 +62,11 @@
 
 .footer__nav {
     margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 42px 20px;
+    flex-direction: row;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    padding: 20px 42px 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
 
@@ -77,15 +78,16 @@
     }
 }
 
-// .footer__item {
-
-// }
+.footer__item {
+    all: unset;
+    &:not(:last-child) {
+        all: unset;
+    }
+}
 
 .footer__link {
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-    text-transform: uppercase;
     color: #FFFFFF;
 
     &:hover {
